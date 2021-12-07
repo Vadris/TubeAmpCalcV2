@@ -1,4 +1,4 @@
-package com.example.tubeampcalcv2;
+package com.gui.tubeampcalcv2;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
