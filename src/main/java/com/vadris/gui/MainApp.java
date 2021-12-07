@@ -1,4 +1,4 @@
-package com.gui.tubeampcalcv2;
+package com.vadris.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
