@@ -11,4 +11,12 @@ public final class Basic {
         }
         return Math.pow(x, (1/n));
     }
+
+    /** returns true if x falls in between the boundaries **/
+    public static boolean isInRange(double x, double boundA, double boundB){
+        if(boundB > boundA){
+            return x < boundB && x > boundA;
+        }
+        return x < boundA && x > boundB;
+    }
 }
