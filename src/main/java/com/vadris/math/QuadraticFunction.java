@@ -1,5 +1,7 @@
 package com.vadris.math;
 
+import java.util.ArrayList;
+
 public class QuadraticFunction extends Function{
     private String name;
     private double a;
@@ -17,6 +19,35 @@ public class QuadraticFunction extends Function{
         this.a = a;
         this.b = b;
         this.c = c;
+    }
+
+    public ArrayList<Coordinate> calculateZeroCrossings() throws Exception {
+        double d = Math.pow(b, 2) - 4 * a * c;
+        if (d < 0){
+            return new ArrayList<>();
+        }
+        if (d == 0){
+            ArrayList<Coordinate> zeroCrossings = new ArrayList<>();
+
+            double x = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            double y = calc(x);
+            zeroCrossings.add(new Coordinate(x, y));
+
+            return zeroCrossings;
+        }
+        if(d > 0){
+            ArrayList<Coordinate> zeroCrossings = new ArrayList<>();
+
+            double x = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            double y = calc(x);
+            zeroCrossings.add(new Coordinate(x, y));
+            x = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            y = calc(x);
+            zeroCrossings.add(new Coordinate(x, y));
+
+            return zeroCrossings;
+        }
+        return null; /** Should never have to return null **/
     }
 
     @Override
