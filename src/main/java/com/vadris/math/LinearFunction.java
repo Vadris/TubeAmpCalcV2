@@ -80,4 +80,17 @@ public class LinearFunction extends Function{
     public void setName(String name) {
         this.name = name;
     }
+
+
+    public static Coordinate findIntersection(LinearFunction functionA, LinearFunction functionB) throws Exception {
+        try {
+            double xs = (functionB.b - functionA.b) / (functionA.m - functionB.m);
+            double ys = functionA.calc(xs);
+
+            return new Coordinate(xs, ys);
+        }
+        catch(Exception e) {
+            throw new Exception("Functions do not intersect");
+        }
+    }
 }
