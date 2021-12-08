@@ -41,4 +41,8 @@ public class Coordinate implements ToStringInterface{
     public void setName(String name) {
         this.name = name;
     }
+
+    public static boolean isInRange(Coordinate test, Coordinate bound1, Coordinate bound2) {
+        return Basic.isInRange(test.getX(), bound1.getX(), bound2.getX()) && Basic.isInRange(test.getY(), bound1.getY(), bound2.getY());
+    }
 }
