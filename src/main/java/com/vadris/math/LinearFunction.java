@@ -52,12 +52,12 @@ public class LinearFunction extends Function{
     @Override
     public String toString(){
         if(b > 0) {
-            return name + "(x)=" + String.valueOf(m) + "x" + "+" + String.valueOf(b);
+            return name + "(x)=" + m + "x" + "+" + b;
         }
         if(b == 0){
-            return name + "(x)=" + String.valueOf(m) + "x";
+            return name + "(x)=" + m + "x";
         }
-        return name + "(x)=" + String.valueOf(m) + "x" + "-" + String.valueOf(b * -1);
+        return name + "(x)=" + m + "x" + "-" + b * -1;
     }
 
     /** Getter Methods **/
