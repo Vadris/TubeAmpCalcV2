@@ -1,6 +1,6 @@
 package com.vadris.math;
 
-public class Coordinate implements toStringInterface{
+public class Coordinate implements ToStringInterface{
     private double x;
     private double y;
     private String name;
@@ -18,7 +18,7 @@ public class Coordinate implements toStringInterface{
 
     @Override
     public String toString(){
-        return name + "(" + String.valueOf(x) + "|" + String.valueOf(y) + ")";
+        return name + "(" + x + "|" + y + ")";
     }
 
     /** Getter Methods **/
