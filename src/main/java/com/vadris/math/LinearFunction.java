@@ -15,7 +15,7 @@ public class LinearFunction {
     public LinearFunction(double m, double b){
         this.m = m;
         this.b = b;
-        this.name = "f";
+        name = "f";
     }
     public LinearFunction(String name, Coordinate pointA, Coordinate pointB) throws Exception{
         if(pointA.getX() == pointB.getX()){
