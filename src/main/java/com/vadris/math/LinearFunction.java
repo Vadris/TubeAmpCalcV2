@@ -1,5 +1,7 @@
 package com.vadris.math;
 
+import javafx.scene.effect.Light;
+
 public class LinearFunction {
     private double m;
     private double b;
@@ -14,6 +16,34 @@ public class LinearFunction {
         this.m = m;
         this.b = b;
         this.name = "f";
+    }
+    public LinearFunction(String name, Coordinate pointA, Coordinate pointB) throws Exception{
+        if(pointA.getX() == pointB.getX()){
+            throw new Exception("Points must have different x Coordinates");
+        }
+        if(pointA.getX() > pointB.getX()){
+            m = (pointA.getY() - pointB.getY()) / (pointA.getX() - pointB.getX());
+            b = pointA.getY() - m * pointA.getX();
+        }
+        if(pointA.getX() < pointB.getX()){
+            m = (pointB.getY() - pointA.getY()) / (pointB.getX() - pointA.getX());
+            b = pointA.getY() - m * pointA.getX();
+        }
+        this.name  = name;
+    }
+    public LinearFunction(Coordinate pointA, Coordinate pointB) throws Exception{
+        if(pointA.getX() == pointB.getX()){
+            throw new Exception("Points must have different x Coordinates");
+        }
+        if(pointA.getX() > pointB.getX()){
+            m = (pointA.getY() - pointB.getY()) / (pointA.getX() - pointB.getX());
+            b = pointA.getY() - m * pointA.getX();
+        }
+        if(pointA.getX() < pointB.getX()){
+            m = (pointB.getY() - pointA.getY()) / (pointB.getX() - pointA.getX());
+            b = pointA.getY() - m * pointA.getX();
+        }
+        name = "f";
     }
 
     @Override
