@@ -56,4 +56,26 @@ public class Graph implements ToStringInterface{
     public void setName(String name) {
         this.name = name;
     }
+
+    public static Coordinate findIntersection(Graph graphA, Graph graphB) throws Exception {
+        for (int i = 0; i <= graphA.getCoordinates().size() - 2; i++){
+            LinearFunction function1 = new LinearFunction(graphA.getCoordinates().get(i), graphA.getCoordinates().get(i + 1));
+
+            for (int j = 0; j <= graphB.getCoordinates().size() - 2; j++){
+                LinearFunction function2 = new LinearFunction(graphB.getCoordinates().get(j), graphB.getCoordinates().get(j + 1));
+
+                try{
+                    Coordinate coord = LinearFunction.findIntersection(function1, function2);
+                    if (Coordinate.isInRange(coord, graphA.getCoordinates().get(i), graphA.getCoordinates().get(i + 1)) && Coordinate.isInRange(coord, graphB.coordinates.get(j), graphB.coordinates.get(j + 1)))
+                    {
+                        return coord;
+                    }
+                }
+                catch(Exception e){
+                }
+            }
+        }
+        throw new Exception("Graphs do not intersect");
+    }
 }
+
