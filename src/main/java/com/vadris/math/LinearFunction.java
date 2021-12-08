@@ -16,6 +16,17 @@ public class LinearFunction {
         this.name = "f";
     }
 
+    @Override
+    public String toString(){
+        if(b > 0) {
+            return name + "(x)=" + String.valueOf(m) + "x" + "+" + String.valueOf(b);
+        }
+        if(b == 0){
+            return name + "(x)=" + String.valueOf(m) + "x";
+        }
+        return name + "(x)=" + String.valueOf(m) + "x" + "-" + String.valueOf(b * -1);
+    }
+
     /** Getter Methods **/
     public double getM() {
         return m;

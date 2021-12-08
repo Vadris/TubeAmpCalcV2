@@ -16,6 +16,11 @@ public class Coordinate {
         this.y = y;
     }
 
+    @Override
+    public String toString(){
+        return name + "(" + String.valueOf(x) + "|" + String.valueOf(y) + ")";
+    }
+
     /** Getter Methods **/
     public double getX(){
         return x;
