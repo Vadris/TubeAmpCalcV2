@@ -1,8 +1,6 @@
 package com.vadris.math;
 
-import javafx.scene.effect.Light;
-
-public class LinearFunction {
+public class LinearFunction extends Function{
     private double m;
     private double b;
     private String name;
@@ -44,6 +42,11 @@ public class LinearFunction {
             b = pointA.getY() - m * pointA.getX();
         }
         name = "f";
+    }
+
+    @Override
+    public double calc(double x) {
+        return m * x + b;
     }
 
     @Override
