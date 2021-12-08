@@ -1,6 +1,6 @@
 package com.vadris.math;
 
-public abstract class Function {
+public interface FunctionInterface extends toStringInterface {
     public abstract double calc(double x);
 
     @Override

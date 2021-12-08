@@ -1,6 +1,6 @@
 package com.vadris.math;
 
-public class Coordinate {
+public class Coordinate implements toStringInterface{
     private double x;
     private double y;
     private String name;

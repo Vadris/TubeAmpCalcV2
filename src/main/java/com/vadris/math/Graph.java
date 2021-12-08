@@ -2,7 +2,7 @@ package com.vadris.math;
 
 import java.util.ArrayList;
 
-public class Graph {
+public class Graph implements toStringInterface{
     private String name;
     private ArrayList<Coordinate> coordinates;
 

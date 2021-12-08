@@ -1,6 +1,6 @@
 package com.vadris.math;
 
-public class LinearFunction extends Function{
+public class LinearFunction implements FunctionInterface{
     private double m;
     private double b;
     private String name;

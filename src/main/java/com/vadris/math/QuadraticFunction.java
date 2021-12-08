@@ -2,7 +2,7 @@ package com.vadris.math;
 
 import java.util.ArrayList;
 
-public class QuadraticFunction extends Function{
+public class QuadraticFunction implements FunctionInterface{
     private String name;
     private double a;
     private double b;
