@@ -49,6 +49,9 @@ public class Graph {
     public ArrayList<Coordinate> getCoordinates() {
         return coordinates;
     }
+    public Coordinate getCoordinate(int index){
+        return coordinates.get(index);
+    }
     /** Setter Methods **/
     public void setName(String name) {
         this.name = name;
