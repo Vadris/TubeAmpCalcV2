@@ -1,7 +1,8 @@
 package com.vadris.tube;
 
-abstract class Tube {
+public abstract class Tube {
     private String name;
+    private String usName;
 
     /**
      * Heater voltage in volts
@@ -11,11 +12,11 @@ abstract class Tube {
      * Heater current in milliAmps
      */
     private double iHeater;
-    /**
-     * Number of pins
-     */
-    private int pins;
 
+    /**
+     * amplification factor of the Tube
+     */
+    private double amplification;
     /**
      * Maximum anode voltage in volt
      */
@@ -24,10 +25,6 @@ abstract class Tube {
      * Maximum anode dissipation in watts
      */
     private double pAnode;
-    /**
-     * Maximum cathode current in amps
-     */
-    private double iCathode;
     /**
      * Maximum grid voltage in volts
      */
@@ -39,14 +36,14 @@ abstract class Tube {
 
     private PlateCharacteristics plateCharacteristics;
 
-    public Tube(String name, double uHeater, double iHeater, int pins, double uAnode, double pAnode, double iCathode, double uGrid, double rGrid, PlateCharacteristics plateCharacteristics){
+    public Tube(String name, String usName, double uHeater, double iHeater, double amplification, double uAnode, double pAnode, double uGrid, double rGrid, PlateCharacteristics plateCharacteristics){
         this.name = name;
+        this.usName = usName;
         this.uHeater = uHeater;
         this.iHeater = iHeater;
-        this.pins = pins;
+        this.amplification = amplification;
         this.uAnode = uAnode;
         this.pAnode = pAnode;
-        this.iCathode = iCathode;
         this.uGrid = uGrid;
         this.rGrid = rGrid;
         this.plateCharacteristics = plateCharacteristics;
@@ -55,28 +52,28 @@ abstract class Tube {
     public String getName() {
         return name;
     }
-    public double get_uHeater() {
+    public String getUsName() {
+        return usName;
+    }
+    public double getUHeater() {
         return uHeater;
     }
-    public double get_iHeater() {
+    public double getIHeater() {
         return iHeater;
     }
-    public int get_Pins() {
-        return pins;
+    public double getAmplification() {
+        return amplification;
     }
-    public double get_uAnode() {
+    public double getUAnode() {
         return uAnode;
     }
-    public double get_pAnode() {
+    public double getPAnode() {
         return pAnode;
     }
-    public double get_iCathode() {
-        return iCathode;
-    }
-    public double get_uGrid() {
+    public double getUGrid() {
         return uGrid;
     }
-    public double get_rGrid() {
+    public double getRGrid() {
         return rGrid;
     }
     public PlateCharacteristics get_PlateCharacteristics() {
