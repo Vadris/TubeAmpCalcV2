@@ -9,8 +9,6 @@ import com.vadris.tube.TubeLoader;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        Tube tube = TubeLoader.loadTube("D:\\Github\\TubeAmpCalcV2\\data\\Tubes\\ECC83");
-        System.out.println(tube.getAmplification());
-        System.out.println(tube.get_PlateCharacteristics().getPlateCharacteristicCurve(-4.0));
+
     }
 }
