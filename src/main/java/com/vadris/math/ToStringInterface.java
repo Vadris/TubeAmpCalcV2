@@ -1,6 +1,6 @@
 package com.vadris.math;
 
-public interface ToStringInterface {
+interface ToStringInterface {
     @Override
     String toString();
 }

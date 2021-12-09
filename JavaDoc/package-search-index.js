@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.vadris.gui","l":"com.vadris"},{"m":"com.vadris.gui","l":"com.vadris.gui"},{"m":"com.vadris.gui","l":"com.vadris.math"}];updateSearchResults();
