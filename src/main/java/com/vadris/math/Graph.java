@@ -36,10 +36,7 @@ public class Graph implements ToStringInterface{
 
     @Override
     public String toString() {
-        return "Graph{" +
-                "name='" + name + '\'' +
-                ", coordinates=" + coordinates +
-                '}';
+        return name + "=" + coordinates;
     }
 
     /** Getter Methods **/
