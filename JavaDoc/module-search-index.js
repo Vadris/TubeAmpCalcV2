@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"com.vadris.gui"}];updateSearchResults();
+moduleSearchIndex = [];updateSearchResults();
