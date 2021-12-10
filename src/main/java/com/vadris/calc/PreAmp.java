@@ -12,7 +12,17 @@ import com.vadris.tube.Tube;
 public class PreAmp {
 
     public static Graph calcLoadLine(double rLoad, double uAnode){
-        return null;
+        Coordinate coordinateA = new Coordinate(0, uAnode);
+
+        double x  = uAnode / (rLoad / 1000);
+        Coordinate coordinateB = new Coordinate(x, 0);
+
+        Graph loadLine = new Graph();
+
+        loadLine.addCoordinate(coordinateA);
+        loadLine.addCoordinate(coordinateB);
+
+        return loadLine;
     }
 
     public static Coordinate calcOperatingPoint(Tube tube, Graph loadLine){
