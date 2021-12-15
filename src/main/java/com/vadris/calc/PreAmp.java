@@ -27,6 +27,7 @@ public class PreAmp {
 
     public static Coordinate calcOperatingPoint(Tube tube, Graph loadLine){
         return  null;
+
     }
 
     public static double calcEqAnodeResistance(){
